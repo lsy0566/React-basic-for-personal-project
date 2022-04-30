@@ -9,6 +9,10 @@ import Mailbox from './Mailbox';
 import Page from './Page';
 import NumberList from './NumberList';
 import Blog from './Blog';
+import NameForm from './NameForm';
+import EssayForm from './EssayForm';
+import FlavorForm from './FlavorForm';
+import Reservation from './Reservation';
 
 class Clock extends Component {
 
@@ -21,26 +25,26 @@ class Clock extends Component {
     date: new Date()
   }
 
-  componentDidMount(){
+  componentDidMount() {
     this.timerID = setInterval(
       () => this.tick(),
       1000
     );
   }
 
-  componentWillUnmount(){
+  componentWillUnmount() {
     clearInterval(this.timerID);
   }
 
-  tick(){
+  tick() {
     this.setState({
       date: new Date()
     });
   }
 
-  
+
   render() {
-    
+
     // const {date.toLocaleTimeString()} = this.state;
     return (
       <div>
@@ -54,10 +58,10 @@ class Clock extends Component {
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 const messages = ['React', 'Re: React', 'Re:Re: React'];
-const numbers = [1,2,3,4,5];
+const numbers = [1, 2, 3, 4, 5];
 const posts = [
-  {id: 1, title: 'Hello World', content: 'Welcome to learning React!'},
-  {id: 2, title: 'Installation', content: 'You can install React from npm.'}
+  { id: 1, title: 'Hello World', content: 'Welcome to learning React!' },
+  { id: 2, title: 'Installation', content: 'You can install React from npm.' }
 ]
 
 root.render(
@@ -69,6 +73,10 @@ root.render(
     <Page />
     <NumberList numbers={numbers} />
     <Blog posts={posts} />
+    <NameForm />
+    <EssayForm />
+    <FlavorForm />
+    <Reservation />
   </div>
 );
 
