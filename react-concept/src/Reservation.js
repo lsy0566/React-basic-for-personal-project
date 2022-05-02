@@ -2,13 +2,14 @@ import { Component } from "react";
 
 class Reservation extends Component {
     state = {
-        isGoging: true,
+        isGoing: true,
         numberOfGuests: 2
     };
 
     handleInputChange = (e) => {
         const target = e.target;
         const value = target.type === 'checkbox' ? target.checked : target.value;
+        // 엘리먼트의 타입이 checkbox이면 checked를 실행하고 아니면 상태값에 엘리먼트의 value 값을 넣는다.
         const name = target.name;
 
         this.setState({

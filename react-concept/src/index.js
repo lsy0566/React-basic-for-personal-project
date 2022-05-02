@@ -13,6 +13,12 @@ import NameForm from './NameForm';
 import EssayForm from './EssayForm';
 import FlavorForm from './FlavorForm';
 import Reservation from './Reservation';
+import Calculator from './Calculator';
+import WelcomeDialog from './WelcomeDialog';
+import SplitPane from './SplitPane';
+import Contacts from './Contacts';
+import Chat from './Chat';
+import SignUpDialog from './SignUpDialog';
 
 class Clock extends Component {
 
@@ -66,7 +72,7 @@ const posts = [
 
 root.render(
   <div>
-    <Toggle />
+    {/* <Toggle />
     <Greeting />
     <LoginControl />
     <Mailbox unreadMessages={messages} />
@@ -75,8 +81,18 @@ root.render(
     <Blog posts={posts} />
     <NameForm />
     <EssayForm />
-    <FlavorForm />
-    <Reservation />
+    <FlavorForm /> */}
+    {/* <Reservation />
+    <Calculator /> */}
+    <WelcomeDialog />
+    <SplitPane
+      left={
+        <Contacts />
+      }
+      right={
+        <Chat />
+      } />
+      <SignUpDialog />
   </div>
 );
 
